@@ -13,7 +13,6 @@ if (isset($_POST['btnInsertar'])) {
 
 ?>
 
-<!-- 	<main role="main" class="container">
 
 		<div class="starter-template">
 			<h1>CRUD sencillo con PHP + AJAX</h1>

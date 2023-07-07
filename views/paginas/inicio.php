@@ -1,5 +1,4 @@
 <?php
-
     require_once './controllers/ClienteController.php';
     $objeto = new ClienteController();
     $clientes = $objeto->obtenerClientes();
@@ -9,7 +8,7 @@
 	<main role="main" class="container">
 
 		<div class="starter-template">
-			<h1>CRUD sencillo con PHP + AJAX</h1>
+			<h1>Registro de Clientes</h1>
 			<div class="row">
 				<div class="col-md-6 offset-3">
 					<?php
@@ -31,6 +30,7 @@
 						<th scope="col">#id</th>
 						<th scope="col">nombre</th>
 						<th scope="col">e-mail</th>
+						<th scope="col">domicilio</th>
 						<th scope="col">acciones</th>
 					</tr>
 				</thead>
@@ -41,8 +41,10 @@
 					?>
 					<tr>
 						<th scope="row"><?=$r['id'];?></th>
-						<td><?=$r['nombre'];?></td>
+						<td><?=$r['nombre']." ".$r['apellido_paterno']." ".$r['apellido_materno'];?>
+						</td>
 						<td><?=$r['email'];?></td>
+						<td><?=$r['domicilio'];?></td>
 						<td>
 							<a href="?page=editar&id=<?= $r['id']; ?>" type="a" class="btn btn-info">Editar</a>
 							<a href="?page=eliminar&id=<?= $r['id']; ?>" type="a" class="btn btn-danger">Eliminar</a>
@@ -77,9 +79,24 @@
 						<small id="nombreHelp" class="form-text text-muted">Ingrese el nombre completo del cliente.</small>
 					</div>
 					<div class="form-group">
+						<label for="email">Apellido paterno</label>
+						<input type="text" id="paterno" name="paterno" class="form-control" aria-describedby="paternoHelp">
+						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido paterno </small>
+					</div>
+					<div class="form-group">
+						<label for="email">Apellido materno</label>
+						<input type="text" id="materno" name="materno" class="form-control" aria-describedby="maternoHelp">
+						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido materno </small>
+					</div>
+					<div class="form-group">
 						<label for="email">E-mail</label>
 						<input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">Ingrese el correo electronico del cliente.</small>
+					</div>
+					<div class="form-group">
+						<label for="email">Domicilio</label>
+						<input type="text" id="domicilio" name="domicilio" class="form-control" aria-describedby="domicilioHelp">
+						<small id="domicilioHelp" class="form-text text-muted">Ingrese el domicilio </small>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -105,15 +122,12 @@
 				type: "POST",
 				data: datos,
 				url:  "insertar.php",
-				success: function(r){
-					// if (r==1) {
-					// 	$('#registroForm')[0].reset();
-					// 	$('#tablaCliente').load();
+				success: function(mensage){
 					// 	alert ("Agregado Ok!");
 					// } else {
 					// 	alert("Fallo al agregar");
 					// }
-					alert(r);
+					alert(mensage);
 				}
 			});
 		});
