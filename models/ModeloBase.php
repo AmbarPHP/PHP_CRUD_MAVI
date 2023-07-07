@@ -20,7 +20,7 @@ class ModeloBase extends DB {
 			
 		    $sql = "INSERT INTO $tabla (".implode(", ", $llaves).") VALUES ( :".implode(", :",$llaves).")";
 			//$sql = "INSERT INTO cliente "."('id', 'nombre', 'email')"." VALUES (:id,:name,:email);";
-		    
+		    //die(print_r(" insertar ".$sql, true ));
 			$q = $this->db->prepare($sql);
 		    return $q->execute($datos);
 		

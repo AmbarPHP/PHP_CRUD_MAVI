@@ -6,7 +6,7 @@ class ClienteController {
 
 	#estableciendo las vistas
 	public function inicio() {
-		
+		//muestra el listado de los usuarios 
         require_once('./views/includes/cabecera.php');
         require_once('./views/includes/navbar.php');
         require_once('./views/paginas/inicio.php');
