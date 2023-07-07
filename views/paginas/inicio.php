@@ -6,7 +6,6 @@
 ?>
 
 	<main role="main" class="container">
-
 		<div class="starter-template">
 			<h1>Registro de Clientes</h1>
 			<div class="row">
@@ -123,10 +122,6 @@
 				data: datos,
 				url:  "insertar.php",
 				success: function(mensage){
-					// 	alert ("Agregado Ok!");
-					// } else {
-					// 	alert("Fallo al agregar");
-					// }
 					alert(mensage);
 				}
 			});
