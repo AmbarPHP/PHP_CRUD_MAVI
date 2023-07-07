@@ -43,12 +43,14 @@
 						</div>
 						<div class="form-group">
 						<label for="email">Apellido paterno</label>
-						<input type="text" id="paterno" name="paterno" class="form-control" aria-describedby="paternoHelp">
+						<input type="text" id="paterno" name="paterno" class="form-control" aria-describedby="paternoHelp"
+						value="<?= $r['apellido_paterno']; ?>">
 						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido paterno </small>
 						</div>
 						<div class="form-group">
 						<label for="email">Apellido materno</label>
-						<input type="text" id="materno" name="materno" class="form-control" aria-describedby="maternoHelp">
+						<input type="text" id="materno" name="materno" class="form-control" aria-describedby="maternoHelp"
+						value="<?= $r['apellido_materno']; ?>">
 						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido materno </small>
 						</div>
 
@@ -59,7 +61,8 @@
 						</div>
 					<div class="form-group">
 						<label for="email">Domicilio</label>
-						<input type="text" id="domicilio" name="domicilio" class="form-control" aria-describedby="domicilioHelp">
+						<input type="text" id="domicilio" name="domicilio" class="form-control" aria-describedby="domicilioHelp"
+						value="<?= $r['domicilio']; ?>">
 						<small id="domicilioHelp" class="form-text text-muted">Ingrese el domicilio </small>
 					</div>
 						<button type="submit" name="editar" class="btn btn-info">Editar registro</button>
