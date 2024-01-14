@@ -11,6 +11,8 @@ if (isset($_POST['btnInsertar'])) {
 		'apellido_paterno'    => $_POST['apellido_paterno'],
 		'apellido_materno'    => $_POST['apellido_materno'],
 	);
+	//die(print_r(" esttoy tratando de checar que pasa>".$_POST['apellido_paterno'], true ));
+
 	$objeto->insertarCliente($datos);
 }
 

@@ -79,12 +79,12 @@
 					</div>
 					<div class="form-group">
 						<label for="email">Apellido paterno</label>
-						<input type="text" id="paterno" name="paterno" class="form-control" aria-describedby="paternoHelp">
+						<input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control" aria-describedby="paternoHelp">
 						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido paterno </small>
 					</div>
 					<div class="form-group">
 						<label for="email">Apellido materno</label>
-						<input type="text" id="materno" name="materno" class="form-control" aria-describedby="maternoHelp">
+						<input type="text" id="apellido_materno" name="apellido_materno" class="form-control" aria-describedby="maternoHelp">
 						<small id="domicilioHelp" class="form-text text-muted">Ingrese apellido materno </small>
 					</div>
 					<div class="form-group">

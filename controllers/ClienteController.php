@@ -2,6 +2,7 @@
 
 require_once './models/ClienteModel.php';
 
+
 class ClienteController {
 
 	#estableciendo las vistas
@@ -46,9 +47,8 @@ class ClienteController {
 	public function editarCliente($id, $datos) {
 
 		
-		$cliente = new ClienteModel();		
+		$cliente = new ClienteModel();	
 		$cliente->editarCliente($id, $datos);
-
 		header('Location: index.php?page=inicio&mensaje=Guardado con Éxito');
 		
 	}

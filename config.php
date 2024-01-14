@@ -1,5 +1,4 @@
 <?php
-
-	define("NOMBRE_SISTEMA", "MAVI TEST");
+define("NOMBRE_SISTEMA" ,"Mavi");
 
 ?>

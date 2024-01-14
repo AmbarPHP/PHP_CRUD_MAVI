@@ -23,11 +23,11 @@ class ClienteModel extends ModeloBase {
 
 	public function insertarCliente($datos) {
 
-		//die(print_r(" esttoy tratando de checar que pasa>", true ));
-
+		
 		$db = new ModeloBase();
 		try {
 			$insertar = $db->insertar('cliente', $datos);
+			
 		} catch (PDOException $e) {
 			echo $e->getMessage();
 		}

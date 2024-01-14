@@ -28,7 +28,7 @@ if (!empty($page)) {
 	}
 
 	if (isset($model)) {
-				
+	
 		require_once 'controllers/'.$controller.'.php';
 		$objeto = new $controller();
 		$objeto->$view();
